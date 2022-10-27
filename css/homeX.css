@@ -1,0 +1,209 @@
+.animations-grid{
+  position: relative;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  column-gap: 1rem;
+  row-gap: 1rem;
+  grid-template-areas: 
+  ". . . . . . . ."
+  "X X X X X X X X" 
+  "VIN VIN VIN VIN TEAM TEAM TEAM TEAM" 
+  "VIN VIN VIN VIN TEAM TEAM TEAM TEAM"
+  ". . . . . . . .";
+  height: 100%;
+  width: 100%;
+  padding: 0 5rem;
+}
+
+.animations-x{
+  position: relative;
+  grid-area: X;
+}
+
+.animations-x__background{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.animations-x__background img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px);
+  z-index: 1;
+}
+
+.animations-x__content span{
+  position: absolute;
+  top: 0;
+  font-size: 5rem;
+  font-weight: 700;
+  z-index: 10;
+}
+
+@keyframes slide-to-side {
+  0%{
+    left: 45%;
+  }
+  50%{
+    left: 55%;
+  }
+  100%{
+    left: 45%;
+  }
+}
+
+.animations-x__content span:nth-child(1){
+  color: #FFFFFF;
+  animation: 1s ease 0.5s infinite slide-to-side forwards;
+}
+.animations-x__content span:nth-child(2){
+  color: #341253;
+  animation: 1s ease 0.58s infinite slide-to-side forwards;
+}
+.animations-x__content span:nth-child(3){
+  color: #2268A6;
+  animation: 1s ease 0.6s infinite slide-to-side forwards;
+}
+.animations-x__content span:nth-child(4){
+  color: #E995C8;
+  animation: 1s ease 0.68s infinite slide-to-side forwards;
+}
+.animations-x__content span:nth-child(5){
+  color: #FCE8B3;
+  animation: 1s ease 0.7s infinite slide-to-side forwards;
+}
+.animations-x__content span:nth-child(6){
+  color: #0A020E;
+  animation: 1s ease 0.78s infinite slide-to-side forwards;
+}
+
+@keyframes increase-smooth {
+  0%{
+    width: 5rem;
+    height: 5rem;
+  }
+  50%{
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+.vinyl-x{
+  position: relative;
+  grid-area: VIN;
+  background: #C8D2D6;
+}
+
+.vinyl-x__animations{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle{
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+}
+
+.circle:nth-child(1){
+  animation: 3s ease 0s infinite increase-smooth forwards;
+}
+
+.circle:nth-child(2){
+  animation: 3s ease 0.5s infinite increase-smooth forwards;
+}
+
+.circle:nth-child(3){
+  animation: 3s ease 0.6s infinite increase-smooth forwards;
+}
+
+.circle:nth-child(4){
+  animation: 3s ease 0.7s infinite increase-smooth forwards;
+}
+
+
+.vinyl-x__content{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.x__content-title h3{
+  font-size: 4rem;
+}
+.x__content-description p{
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.x__content-title h3,
+.x__content-description p{
+  background: radial-gradient(66.13% 66.13% at 50% 79.03%, #FFFFFF 0%, #444DA0 0.01%, rgba(77, 113, 206, 0.734375) 25.52%, #9298D1 53.65%, #C41EFF 69.79%, #FFFFFF 99.48%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.team-x{
+  grid-area: TEAM;
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+}
+
+.team-x__background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.team-x__background video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-x__content{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--main-font-color);
+}
+
+.team__content-title{
+  font-size: 3rem;
+}
+
+.team__content-stats{
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat{
+  text-align: center;
+}
+
+.stat p:nth-child(1){
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+
+
+
+
