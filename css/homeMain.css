@@ -196,3 +196,70 @@
   color: black;
   background-color: white;
 }
+
+@media screen and (min-width: 320px) and (max-width: 810px) {
+  .showcase__grid{
+    grid-template-areas: 
+  ". . . . . . ."
+  "MON MON MON MON MON MON MON" 
+  "VR VR VR VR HEAD HEAD HEAD" 
+  "WHAT WHAT WHAT WHAT WHAT WHAT WHAT"
+  ". . . . . . .";
+  }
+
+  .showcase-monkey__video{
+    height: 30rem;
+  }
+
+  .showcase-monkey__video video{
+    height: 20rem;
+  }
+
+  .showcase-vr__content{
+    padding: 1rem;
+  }
+
+  .vr__content-title{
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .monkey__content-title h3{
+    font-size: 4rem;
+  }
+ 
+  .monkey__content-description p{
+    font-size: 15px;
+  }
+
+  .showcase-headset__content{
+    bottom: 1rem;
+  }
+
+  .headset__content-title{
+    font-size: 10px;
+  }
+
+  .headset__content-description{
+    font-size: 8px;
+  }
+
+  .showcase-vr__content{
+    padding: 1rem;
+  }
+
+  .vr__content-title{
+    font-size: 10px;
+  }
+
+  .showcase-intro__content{
+    padding: 0.5rem;
+    gap: 5px;
+  }
+
+  .intro__content-title{
+    font-size: 10px;
+  }
+
+}
